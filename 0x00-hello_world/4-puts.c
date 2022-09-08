@@ -1,12 +1,10 @@
 #include <stdio.h>
-/*
+/**
  *
- *This is a program that only prints out a string literal
- *
- *
+ * main - Entry point for print code
+ * Return: Always 0 (Success)*
  * 
 */
-
 int main(void)
 {
 	puts("\"Programming is like building a multilingual puzzle");
