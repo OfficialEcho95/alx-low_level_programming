@@ -1,7 +1,7 @@
 #include <stdio.h>
 /**
- * A file that prints a lateral
  * main - Entry point for print code
+ *
  * Return: Always (Success)
 */
 int main(void)
