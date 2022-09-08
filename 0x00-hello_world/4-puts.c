@@ -1,9 +1,7 @@
 #include <stdio.h>
 /**
- *
  * main - Entry point for print code
  * Return: Always (Success)
- * 
 */
 int main(void)
 {
