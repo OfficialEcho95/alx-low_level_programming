@@ -1,19 +1,21 @@
-#include<stdio.h>
-
+#include <stdio.h>
+#include "main.h"
 /**
- * main - prints the alphabets in small letter
+ * print_alphabet - Entry point for alphabet print.
  *
- * Return: Always 0 (Success)
+ * Return: Always 0.
  */
 void print_alphabet(void)
 {
-	   char a ='a';
-	   int i;
+	char c = 0;
 
-	   for (i <= 0; i <= 26; i++)
-	   {
-	   	   putchar(a);
-	           a++;
-	   }
-           putchar('\n');
+	for (c = 'a'; c <= 'z'; c++)
+	{
+		putchar(c);
+	}
+	putchar('\n');
+}
+int main(void) 
+{
+	print_alphabet();
 }
