@@ -1,4 +1,5 @@
 #include<stdio.h>
+#include<main.h>
 /*
  *THis function prints _putchar
  *Return: 0
