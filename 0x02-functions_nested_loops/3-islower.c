@@ -1,10 +1,10 @@
 #include "main.h"
 /**
-* _isloweir - that checks for alphabetic characters 
+*_islower - that checks for alphabetic characters 
 *
 * c - is the input char
 *
-* Return 0 (Success)
+* Return: Always 0 (Success)
 */
 int _islower(int c)
 {
