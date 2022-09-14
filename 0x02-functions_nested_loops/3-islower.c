@@ -1,6 +1,6 @@
 #include "main.h"
 /**
-* _islower - that checks for alphabetic characters 
+*_islower - that checks for alphabetic characters 
 *
 *@c: - is the input char
 *
