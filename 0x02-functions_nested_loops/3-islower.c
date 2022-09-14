@@ -1,9 +1,8 @@
 #include "main.h"
-
 /**
-* _islower: - that checks for alphabetic characters 
+* _islower - that checks for alphabetic characters 
 *
-* @c: - is the input char
+*@c: - is the input char
 *
 * Return: Always 0 (Success)
 */
