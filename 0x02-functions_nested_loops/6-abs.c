@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "holberton.h"
+#include "main.h"
 /**
 *_abs - check the code for ALX School students.
 * @n: int argument for function
