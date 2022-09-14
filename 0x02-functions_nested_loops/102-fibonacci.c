@@ -7,8 +7,8 @@
 int main(void)
 {
 	unsigned long count, x, y, z;
-	x = 0;
 
+	x = 0;
 	y = 1;
 
 	for (count = 0; count < 50; count++)
