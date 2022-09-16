@@ -1,10 +1,9 @@
 #include <stdio.h>
 #include "main.h"
-
 /**
 * print_most_numbers - code to print for digits
 *
-* Return: Always 0.
+* Return: Always 0 (Success)
 */
 void print_most_numbers(void)
 {
