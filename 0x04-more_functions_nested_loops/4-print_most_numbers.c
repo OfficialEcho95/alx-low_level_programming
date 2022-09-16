@@ -18,4 +18,3 @@ void print_most_numbers(void)
 	}
 	putchar('\n');
 }
-
