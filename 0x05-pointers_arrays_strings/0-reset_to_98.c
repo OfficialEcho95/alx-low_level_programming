@@ -7,9 +7,7 @@
 *@p - The second variable
 * Return: Always 0.
 */
-void reset_to_98(int *n, int *p)
+void reset_to_98(int *n)
 {
-	int a = *n;
-	*n = *p;
-	*p = a;
+	*n = 98;
 }
