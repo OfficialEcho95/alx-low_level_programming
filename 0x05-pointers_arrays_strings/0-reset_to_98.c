@@ -3,7 +3,7 @@
 
 /**
 * main - check the code
-* @n - THe first variable
+* @n - Int value for the argument of the functione
 * Return: void
 */
 void reset_to_98(int *n)
