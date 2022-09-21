@@ -1,4 +1,4 @@
-fndef MAIN_H
+#ifndef MAIN_H
 #define MAIN_H
 
 char *_strcat(char *dest, char *src);
@@ -17,4 +17,3 @@ void print_buffer(char *b, int size);
 
 
 #endif /* MAIN_H */
-
