@@ -5,7 +5,7 @@
 * @dest: target mempry area
 * @src: original memory allocation
 * @n: number of bytes
-*Return: pointer to dest
+* Return: pointer to dest
 */
 
 char *_memcpy(char *dest, char *src, unsigned int n)
