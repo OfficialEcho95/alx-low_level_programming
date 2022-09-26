@@ -1,5 +1,4 @@
 #include "main.h"
-
 /**
 * _memset - add n byte of b to array
 * @s: Array
