@@ -1,0 +1,1 @@
+Recursions are just a way fir functions to call itself within it's own function. It's working is similar to that of iterations but their method calls are different. Let's play a little with recursions.
