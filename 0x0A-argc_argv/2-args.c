@@ -10,17 +10,13 @@
 
 int main(int argc, char *argv[])
 {
-	int result;
+	int i = 0;
 
-	(void) argv;
-	if (argc != 3)
+	while (i < argc)
 	{
-		printf("Error\n");
+		printf("%s\n", argv[i]);
+		i++;
 	}
-	else
-	{
-		result = ((atoi(argv[1])) * (atoi(argv[2])));
-		printf("%d\n", result);
-	}
+	(void) argc;
 	return (0);
 }
