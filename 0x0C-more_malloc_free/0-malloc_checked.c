@@ -1,6 +1,6 @@
 #include "main.h"
 #include <stdlib.h>
-#include <stddef>
+#include <stddef.h>
 
 /**
  *malloc_checked - Creates an array
