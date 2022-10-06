@@ -1,13 +1,15 @@
 #include "main.h"
+#include <stdio.h>
 #include <stdlib.h>
 #include <stddef.h>
 
 /**
- *malloc_checked - Creates an array
- *@b: array size
+ * malloc_checked - Creates an array
+ * @b: array size
  *
- *Return: Pointer to array
+ * Return: Pointer to array
  */
+
 void *malloc_checked(unsigned int b)
 {
 	void *ptr;
