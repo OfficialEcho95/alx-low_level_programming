@@ -16,13 +16,14 @@ int _puts(const char *str)
  * main - prints the product of it's 2 arguments
  * @argc: argument count
  * @argv: arguments
- * 
+ *
  * Return: 0 or 98
  */
 int main(int argc, char **argv)
 {
 	int len_1 = 0, len_2 = 0, len_r = 0, i, j, len_r_tmp, carry = 0, len_tmp;
 	char *s1, *s2, *s_tmp, *res, c1, c2, dig_1, dig_2, temp_res, t2 = 0, sig0 = 0;
+
 	if (argc != 3)
 		return (!!_puts("Error\n") * 98);
 	s1 = argv[1], s2 = argv[2];
