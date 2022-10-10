@@ -1,8 +1,12 @@
 #ifndef DOG_H
 #define DOG_H
 /**
+ * dog - dog struct getting structured
+ *@name: dog name
+ * @age: dog age
+ * @owner: dog owner
  *
- *
+ * Return: Return 0 on success
  */
 
 typedef struct dog
