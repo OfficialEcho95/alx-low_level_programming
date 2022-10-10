@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include "dog.h"
 /**
  * print_dog- name of fucntion
  * struct dog- container for the properties
