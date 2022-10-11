@@ -4,6 +4,7 @@
 
 /**
  * free_dog - Frees the memory for dog
+ *
  * @d: pointer to dog struct
  *
  */
