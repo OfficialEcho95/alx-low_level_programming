@@ -8,12 +8,6 @@
 
 void print_name(char *name, void (*f)(char *)) 
 {
-	if (name)
-	{
-		for (int i = 0; name[i]; i++)
-		{
-			f(&name[i]);
-		}
-	}
-	return;
+	if (f != NULL)
+		f(name);
 }
