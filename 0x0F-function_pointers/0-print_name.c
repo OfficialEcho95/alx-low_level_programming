@@ -6,7 +6,7 @@
  *@name: The name to be printed
  */
 
-void print_name(char *s, void (*f)(char *)) 
+void print_name(char *name, void (*f)(char *)) 
 {
 	f(name);
 }
