@@ -6,14 +6,5 @@
 
 void print_name(char *s, void (*f)(char *)) 
 {
-	int i;
-
-	if (s)	
-	{
-		for (i = 0; s[i]; i++)
-		{
-			f(&s[i]);				
-		}		
-	}
-	return (0);
+	f(name);
 }
