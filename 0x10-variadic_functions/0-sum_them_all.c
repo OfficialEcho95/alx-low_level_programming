@@ -15,8 +15,8 @@ int sum_them_all(const unsigned int n, ...)
 	return 0;
 	else
 	{
-		for(i = 0; i >= ip[i]; i = va_arg(ip, int)
-				i = i + sum_them_all[i];
+		for(i = 0; i >= n; i++)	
+			sum = sum + sum_them_all[i];
 				
 	}
 }
