@@ -1,8 +1,10 @@
 #include <stdio.h>
 #include <stdargs.h>
+#include "variadic_functions.h"
  /**
  * sum_them_all - Function that sums the parameters of a function
  * @n: the first parameter
+ *
  * Return: Return 0 on success
  */
 int sum_them_all(const unsigned int n, ...)
