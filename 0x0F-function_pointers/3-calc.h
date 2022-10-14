@@ -1,8 +1,7 @@
 #ifndef _CALC_H
 #define _CALC_H
-
 /**
- * struct op - Struct op
+ * struct op - The name of the function
  *
  * @op: The operator
  * @f: The function associated
@@ -11,7 +10,7 @@
 typedef struct op
 {
 	char *op;
-        int (*f)(int a, int b);
+	int (*f)(int a, int b);
 } op_t;
 int op_add(int a, int b);
 int op_sub(int a, int b);
