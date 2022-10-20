@@ -6,7 +6,6 @@
 /**
  * print_list - Prints the data in a node
  * @h: node
- *
  * Return: Number of nodes
  */
 
