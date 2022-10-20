@@ -1,20 +1,12 @@
-#include <stdlib.h>
-#include "lists.h"
+#include <stdio.h>
+
+void first(void)__attribute__((constructor));
 
 /**
- * free_list - Frees a linked list
- * @head: The node at the Beginning
+ * first - Print a string before the main function is executed
  */
-
-void free_list(list_t *head)
+void first(void)
 {
-	if (head)
-	{
-		if (head->next)
-			free_list(head->next);
-		if (head->str)
-			free(head->str);
-		if (head)
-			free(head);
-	}
+	printf("You're beat! and yet, you must allow,%s",
+			"\nI bore my house upon my back!\n");
 }
