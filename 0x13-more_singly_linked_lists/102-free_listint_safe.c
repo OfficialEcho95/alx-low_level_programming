@@ -17,31 +17,31 @@ void *_realloc1(void *ptr, unsigned int old_size, unsigned int new_size)
 	unsigned int min_size = old_size < new_size ? old_size : new_size;
 	unsigned int i;
 
-if (new_size == old_size)
+	if (new_size == old_size)
 	return (ptr);
-if (ptr != NULL)
-{
-	if (new_size == 0)
+	if (ptr != NULL)
 	{
+		if (new_size == 0)
+		{
+			free(ptr);
+			return (NULL);
+		}
+	new_ptr = malloc(new_size);
+	if (new_ptr != NULL)
+	{
+		for (i = 0; i < min_size; i++)
+			*((char *)new_ptr + i) = *((char *)ptr + i);
 		free(ptr);
-		return (NULL);
+		return (new_ptr);
 	}
-new_ptr = malloc(new_size);
-if (new_ptr != NULL)
-{
-	for (i = 0; i < min_size; i++)
-		*((char *)new_ptr + i) = *((char *)ptr + i);
-	free(ptr);
-	return (new_ptr);
-}
 	free(ptr);
 	return (NULL);
-}
-else
-{
-	new_ptr = malloc(new_size);
-	return (new_ptr);
-}
+	}	
+	else
+	{
+		new_ptr = malloc(new_size);
+		return (new_ptr);
+	}
 }
 
 /**
@@ -74,7 +74,7 @@ void free_nodes(void **nodes_ptr, size_t n)
 	size_t i;
 	listint_t *node;
 
-for (i = 0; i < n; i++)
+	for (i = 0; i < n; i++)
 	{	
 		node = (listint_t *)(*(nodes_ptr + i));
 		if (node != NULL)
@@ -94,31 +94,31 @@ size_t free_listint_safe(listint_t **h)
 	listint_t *node;
 	size_t i = 0, size = 0, incr = 15;
 
-if (h != NULL && *h != NULL)
-{
-	node = *h;
-	while (node != NULL)
+	if (h != NULL && *h != NULL)
 	{
-		if (i >= size)
-	nodes_addr = _realloc1(nodes_addr,
-	sizeof(void *) * size, sizeof(void *) * (size + incr));
-	if (nodes_addr != NULL)
-	{
-		size += (i >= size ? incr : 0);
-	if (exists1(nodes_addr, i, (void *)node))
-	{
-		break;
+		node = *h;
+		while (node != NULL)
+		{
+			if (i >= size)
+			nodes_addr = _realloc1(nodes_addr,
+		sizeof(void *) * size, sizeof(void *) * (size + incr));
+		if (nodes_addr != NULL)
+		{
+			size += (i >= size ? incr : 0);
+			if (exists1(nodes_addr, i, (void *)node))
+			{
+				break;
+			}
+		*(nodes_addr + i) = (void *)node;
+		i++;
+		node = node->next;
+		}
 	}
-	*(nodes_addr + i) = (void *)node;
-	i++;
-	node = node->next;
-}
-}
 	free_nodes(nodes_addr, i);
 	*h = NULL;
 	if (nodes_addr != NULL)
 		free(nodes_addr);
-}
+	}
 	h = NULL;
 	return (i);
 }
