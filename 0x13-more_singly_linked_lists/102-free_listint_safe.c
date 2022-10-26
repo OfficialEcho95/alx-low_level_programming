@@ -18,7 +18,7 @@ void *_realloc1(void *ptr, unsigned int old_size, unsigned int new_size)
 	unsigned int i;
 
 	if (new_size == old_size)
-	return (ptr);
+		return (ptr);
 	if (ptr != NULL)
 	{
 		if (new_size == 0)
@@ -26,16 +26,16 @@ void *_realloc1(void *ptr, unsigned int old_size, unsigned int new_size)
 			free(ptr);
 			return (NULL);
 		}
-	new_ptr = malloc(new_size);
-	if (new_ptr != NULL)
-	{
-		for (i = 0; i < min_size; i++)
-			*((char *)new_ptr + i) = *((char *)ptr + i);
+		new_ptr = malloc(new_size);
+		if (new_ptr != NULL)
+		{
+			for (i = 0; i < min_size; i++)
+				*((char *)new_ptr + i) = *((char *)ptr + i);
+			free(ptr);
+			return (new_ptr);
+		}
 		free(ptr);
-		return (new_ptr);
-	}
-	free(ptr);
-	return (NULL);
+		return (NULL);
 	}	
 	else
 	{
@@ -100,24 +100,24 @@ size_t free_listint_safe(listint_t **h)
 		while (node != NULL)
 		{
 			if (i >= size)
-			nodes_addr = _realloc1(nodes_addr,
-		sizeof(void *) * size, sizeof(void *) * (size + incr));
-		if (nodes_addr != NULL)
-		{
-			size += (i >= size ? incr : 0);
-			if (exists1(nodes_addr, i, (void *)node))
+				nodes_addr = _realloc1(nodes_addr,
+			sizeof(void *) * size, sizeof(void *) * (size + incr));
+			if (nodes_addr != NULL)
 			{
-				break;
+				size += (i >= size ? incr : 0);
+				if (exists1(nodes_addr, i, (void *)node))
+				{
+					break;
+				}
+			*(nodes_addr + i) = (void *)node;
+			i++;
+			node = node->next;
 			}
-		*(nodes_addr + i) = (void *)node;
-		i++;
-		node = node->next;
 		}
-	}
-	free_nodes(nodes_addr, i);
-	*h = NULL;
-	if (nodes_addr != NULL)
-		free(nodes_addr);
+		free_nodes(nodes_addr, i);
+		*h = NULL;
+		if (nodes_addr != NULL)
+			free(nodes_addr);
 	}
 	h = NULL;
 	return (i);
