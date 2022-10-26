@@ -59,7 +59,7 @@ char exists1(void **arr, size_t n, void *item)
 	for (i = 0; i < n; i++)
 	{
 		if (*(arr + i) == item)
-		return (1);
+			return (1);
 	}
 	return (0);
 }
@@ -78,7 +78,7 @@ void free_nodes(void **nodes_ptr, size_t n)
 	{	
 		node = (listint_t *)(*(nodes_ptr + i));
 		if (node != NULL)
-		free(node);
+			free(node);
 	}
 }
 
