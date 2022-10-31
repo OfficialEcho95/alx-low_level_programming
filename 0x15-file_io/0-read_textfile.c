@@ -16,7 +16,7 @@
  * Return: Actual number of letters read and printed
  */
 
-ssize_t read_textfile(const char *filename, size_t letters)
+size_t read_textfile(const char *filename, size_t letters)
 {
 	int fd;
 	ssize_t count, read_file;
