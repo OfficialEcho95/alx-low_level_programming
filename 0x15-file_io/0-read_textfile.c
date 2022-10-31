@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include "holberton.h"
 #include "main.h"
 #include <unistd.h>
 #include <sys/types.h>
@@ -16,7 +15,7 @@
  * Return: Actual number of letters read and printed
  */
 
-size_t read_textfile(const char *filename, size_t letters)
+ssize_t read_textfile(const char *filename, size_t letters)
 {
 	int fd;
 	ssize_t count, read_file;
