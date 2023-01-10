@@ -7,11 +7,11 @@
  *
  * Return: the new node, or NULL on failure
  */
-hash_node_t* hash_node(char *key, char *value)
+hash_node_t* hash_node(const char *key, const char *value)
 {
 	hash_node_t* node_t = (hash_node_t*) malloc(sizeof(hash_node_t));
-	node_t->key = (char*)malloc(sizeof(strlen(key) + 1));
-	node_t->key = (char*)malloc(sizeof(strlen(value) + 1));
+	node_t->key = (char*)malloc(strlen(key) + 1);
+	node_t->key = (char*)malloc(strlen(value) + 1);
 
 	strcpy(node_t->key, key);
 	strcpy(node_t->value, value);
