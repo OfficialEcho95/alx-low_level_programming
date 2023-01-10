@@ -16,6 +16,7 @@ hash_node_t* hash_node(const char *key, const char *value)
 	strcpy(node_t->key, key);
 	strcpy(node_t->value, value);
 
+	/**
 	if (node->key == NULL)
 	{
 		free(node);
@@ -30,6 +31,7 @@ hash_node_t* hash_node(const char *key, const char *value)
 	}
 	node_t->next = NULL;
 	return (node_t);
+	*/
 }
 
 /**
