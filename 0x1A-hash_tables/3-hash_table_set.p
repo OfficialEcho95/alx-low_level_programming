@@ -7,30 +7,31 @@
  *
  * Return: the new node, or NULL on failure
  */
-hash_node_t *make_hash_node(const char *key, const char *value)
+hash_node_t* hash_node(const char *key, const char *value)
 {
-	hash_node_t *node;
+	hash_node_t* node_t = (hash_node_t*) malloc(sizeof(hash_node_t));
+	node_t->key = (char*)malloc(strlen(key) + 1);
+	node_t->key = (char*)malloc(strlen(value) + 1);
 
-	node = malloc(sizeof(hash_node_t));
-	if (node == NULL)
-		return (NULL);
-	node->key = strdup(key);
-	if (node->key == NULL)
+	strcpy(node_t->key, key);
+	strcpy(node_t->value, value);
+
+	if (node_t->key == NULL)
 	{
-		free(node);
+		free(node_t);
 		return (NULL);
 	}
-	node->value = strdup(value);
-	if (node->value == NULL)
+
+	if (node_t->key == NULL)
 	{
-		free(node->key);
-		free(node);
+		free(node_t->key);
+		free(node_t);
 		return (NULL);
 	}
-	node->next = NULL;
-	return (node);
+	node_t->next = NULL;
+	return (node_t);
+	
 }
-
 
 /**
  * hash_table_set - sets a key to a value in the hash table
@@ -43,7 +44,7 @@ hash_node_t *make_hash_node(const char *key, const char *value)
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	unsigned long int index;
-	hash_node_t *hash_node, *tmp;
+	hash_node_t *hash_nodee, *tmp;
 	char *new_value;
 
 	if (ht == NULL || ht->array == NULL || ht->size == 0 ||
@@ -64,10 +65,24 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		}
 		tmp = tmp->next;
 	}
-	hash_node = make_hash_node(key, value);
+	hash_nodee = hash_node(key, value);
 	if (hash_node == NULL)
 		return (0);
-	hash_node->next = ht->array[index];
-	ht->array[index] = hash_node;
+	hash_nodee->next = ht->array[index];
+	ht->array[index] = hash_nodee;
 	return (1);
+}
+
+/**
+ * main - check the code
+ *
+ * Return: Always EXIT_SUCCESS.
+ */
+int main(void)
+{
+    hash_table_t *ht;
+
+    ht = hash_table_create(1024);
+    hash_table_set(ht, "betty", "cool");
+    return (EXIT_SUCCESS);
 }
